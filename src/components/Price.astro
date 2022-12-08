@@ -1,0 +1,342 @@
+---
+import CallToAction from './CallToAction.astro';
+---
+
+<style>
+  table {
+    @apply text-xs md:text-base;
+  }
+
+  th,
+  td {
+    @apply border border-[#CACACA] p-2 md:p-4;
+  }
+
+  th {
+    @apply bg-[#262626] text-white font-medium leading-tight;
+  }
+
+  td {
+    @apply font-medium bg-white text-center first:text-left;
+  }
+
+  tbody {
+    td {
+      &:first-child {
+        > div {
+          @apply flex items-baseline gap-1 bg-no-repeat bg-right bg-[url('/img/ui-arrow.svg')];
+        }
+      }
+    }
+  }
+</style>
+
+<section class="bg-[#F4F4F4] py-10 md:py-20">
+  <div class="max-w-[1040px] mx-auto px-5">
+    <header class="mb-10 space-y-4">
+      <h2 class="font-bold text-3xl md:text-4xl">
+        <small
+          class="block font-quicksand font-medium text-[#F84949] text-[0.5em]"
+          >Price</small
+        >
+        <span class="block">料金プラン</span>
+      </h2>
+      <p>低コストで高品質な日本語研修を受講できます。</p>
+    </header>
+
+    <div class="max-w-[900px] mx-auto">
+      <div
+        class="rounded-3xl border-4 border-[#1237AF] bg-[#1237AF] overflow-hidden"
+      >
+        <h3
+          class="text-center font-bold p-2 bg-[#FFF3CE] text-[#093557] text-lg md:text-[22px]"
+        >
+          開講キャンペーン<span class="font-medium">実施中!</span>
+        </h3>
+        <div class="py-10">
+          <div class="text-center">
+            <div
+              class="relative text-white inline-block mx-auto max-w-[220px] sm:max-w-none"
+            >
+              <div
+                class="font-bold text-xl sm:leading-none sm:text-lg xl:text-[22px]"
+              >
+                <span class="text-lg xl:text-[22px]">質の高さを体験できる</span
+                ><br class="sm:hidden" /><span
+                  class="border-b-4 border-[#F8BE06] leading-tight"
+                >
+                  正規レッスンと同様の<span
+                    class="inline-block text-4xl sm:leading-none lg:-mt-[18px] xl:text-[44px]"
+                    >50</span
+                  ><span class="font-normal">分のトライアル※</span>
+                </span>
+              </div>
+              <div class="absolute right-0 top-[calc(100%+5px)] text-[8px]">
+                ※トライアルは１回のみとなります
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center py-20">
+        <a
+          class="w-full max-w-[360px] mx-auto flex items-center justify-center h-12 font-bold text-lg px-4 rounded-full bg-[#F8BE06] text-[#093557] md:h-16 md:text-xl"
+          href="https://nihongo.alc.co.jp/pages/company/lp/apply/"
+          target="_blank"
+          rel="noopener">体験レッスンはこちら</a
+        >
+      </div>
+
+      <table class="border-collapse w-full">
+        <thead>
+          <tr>
+            <th>コース名</th>
+            <th>回数</th>
+            <th>金額（税込）<br /><small>（1レッスン 4,400円）</small></th>
+            <th>有効期限</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div>
+                <span
+                  class="font-quicksand font-bold text-xl text-right min-w-[20px]"
+                  >1</span
+                >
+                <div>
+                  日本語入門20回コース<br />
+                  <span
+                    class="text-white bg-[#C78585] rounded px-2 py-0.5 text-xs inline-block md:text-sm"
+                    >入門・初級</span
+                  >
+                </div>
+              </div>
+            </td>
+            <td rowspan="6">20回</td>
+            <td>88,000円</td>
+            <td rowspan="6">4ヶ月</td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <span
+                  class="font-quicksand font-bold text-xl text-right min-w-[20px]"
+                  >2</span
+                >
+                <div class="leading-relaxed">
+                  日本語初級 Iコース<br />
+                  <span
+                    class="text-white bg-[#A29427] rounded px-2 py-0.5 text-xs inline-block md:text-sm"
+                    >初級</span
+                  >
+                  <span class="text-xs text-[#1B66BE] inline-block md:text-sm"
+                    >日本語能力試験N5程度</span
+                  >
+                </div>
+              </div>
+            </td>
+            <td rowspan="4"
+              >99,000円<br /><span
+                class="text-white text-xs font-normal bg-[#F84949] md:text-sm"
+                >（自己学習教材付き）</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <span
+                  class="font-quicksand font-bold text-xl text-right min-w-[20px]"
+                  >3</span
+                >
+                <div class="leading-relaxed">
+                  日本語初級 IIコース<br />
+                  <span
+                    class="text-white bg-[#A29427] rounded px-2 py-0.5 text-xs inline-block md:text-sm"
+                    >初級</span
+                  >
+                  <span class="text-xs text-[#1B66BE] inline-block md:text-sm"
+                    >日本語能力試験N5-4程度</span
+                  >
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <span
+                  class="font-quicksand font-bold text-xl text-right min-w-[20px]"
+                  >4</span
+                >
+                <div class="leading-relaxed">
+                  ビジネス日本語中級 Iコース<br />
+                  <span
+                    class="text-white bg-[#7A9ACC] rounded px-2 py-0.5 text-xs inline-block md:text-sm"
+                    >中級後半</span
+                  >
+                  <span class="text-xs text-[#1B66BE] inline-block md:text-sm"
+                    >日本語能力試験N4-N3程度</span
+                  >
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <span
+                  class="font-quicksand font-bold text-xl text-right min-w-[20px]"
+                  >5</span
+                >
+                <div class="leading-relaxed">
+                  ビジネス日本語中級 IIコース<br />
+                  <span
+                    class="text-white bg-[#7A9ACC] rounded px-2 py-0.5 text-xs inline-block md:text-sm"
+                    >中級後半</span
+                  >
+                  <span class="text-xs text-[#1B66BE] inline-block md:text-sm"
+                    >日本語能力試験N3-N2程度</span
+                  >
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <span
+                  class="font-quicksand font-bold text-xl text-right min-w-[20px]"
+                  >6</span
+                >
+                <div class="leading-relaxed">
+                  一般ビジネス日本語20回コース<br />
+                  <span
+                    class="text-white bg-[#1B66BE] rounded px-2 py-0.5 text-xs inline-block md:text-sm"
+                    >中上級</span
+                  >
+                  <span class="text-xs text-[#1B66BE] inline-block md:text-sm"
+                    >日本語能力試験N2-N1程度</span
+                  >
+                </div>
+              </div>
+            </td>
+            <td>88,000円</td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <span
+                  class="font-quicksand font-bold text-xl text-right min-w-[20px]"
+                  >7</span
+                >
+                <div class="leading-relaxed">
+                  一般ビジネス日本語10回コース<br />
+                  <span
+                    class="text-white bg-[#1B66BE] rounded px-2 py-0.5 text-xs inline-block md:text-sm"
+                    >中上級</span
+                  >
+                  <span class="text-xs text-[#1B66BE] inline-block md:text-sm"
+                    >日本語能力試験N2-N1程度</span
+                  >
+                </div>
+              </div>
+            </td>
+            <td rowspan="5">10回</td>
+            <td rowspan="5">44,000円</td>
+            <td rowspan="5">3ヶ月</td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <span
+                  class="font-quicksand font-bold text-xl text-right min-w-[20px]"
+                  >8</span
+                >
+                <div class="leading-relaxed">
+                  ビジネス電話対応コース<br />
+                  <span
+                    class="text-white bg-[#12437C] rounded px-2 py-0.5 text-xs inline-block md:text-sm"
+                    >中上級・上級</span
+                  >
+                  <span class="text-xs text-[#1B66BE] inline-block md:text-sm"
+                    >日本語能力試験N2-N1以上</span
+                  >
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <span
+                  class="font-quicksand font-bold text-xl text-right min-w-[20px]"
+                  >9</span
+                >
+                <div class="leading-relaxed">
+                  ビジネス敬語コース<br />
+                  <span
+                    class="text-white bg-[#12437C] rounded px-2 py-0.5 text-xs inline-block md:text-sm"
+                    >中上級・上級</span
+                  >
+                  <span class="text-xs text-[#1B66BE] inline-block md:text-sm"
+                    >日本語能力試験N2-N1以上</span
+                  >
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <span
+                  class="font-quicksand font-bold text-xl text-right min-w-[20px]"
+                  >10</span
+                >
+                <div class="leading-relaxed">
+                  ビジネスマナーコース<br />
+                  <span
+                    class="text-white bg-[#12437C] rounded px-2 py-0.5 text-xs inline-block md:text-sm"
+                    >中上級・上級</span
+                  >
+                  <span class="text-xs text-[#1B66BE] inline-block md:text-sm"
+                    >日本語能力試験N2-N1以上</span
+                  >
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <span
+                  class="font-quicksand font-bold text-xl text-right min-w-[20px]"
+                  >11</span
+                >
+                <div class="leading-relaxed">
+                  ビジネスメールコース<br />
+                  <span
+                    class="text-white bg-[#12437C] rounded px-2 py-0.5 text-xs inline-block md:text-sm"
+                    >中上級・上級</span
+                  >
+                  <span class="text-xs text-[#1B66BE] inline-block md:text-sm"
+                    >日本語能力試験N2-N1以上</span
+                  >
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="text-[10px] py-2">
+        ※レッスン時間は1レッスン50分となります。※「一般ビジネス日本語20回コース」には、ビジネスマナーコースの内容が含まれています。<br
+        />※受講期間の短縮・延長はご希望に合わせることができます。　※企業様のご要望により、カスタマイズしたコースを制作することもできます。（料金は別途相談）
+      </div>
+    </div>
+  </div>
+</section>
+
+<CallToAction />

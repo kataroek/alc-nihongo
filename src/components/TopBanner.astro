@@ -1,0 +1,240 @@
+---
+import FormRun from './FormRun.astro';
+import logoALC from '/img/logo-alc.png';
+---
+
+<style>
+  .tagline {
+    @media screen and (max-height: 760px) {
+      @apply text-[clamp(14px,3vh,24px)] leading-[2.2em];
+    }
+  }
+  .banner-content {
+    @media screen and (max-height: 760px) {
+      @apply space-y-4 py-4;
+    }
+  }
+
+  .tagline-header {
+    @media screen and (max-height: 760px) {
+      @apply space-y-0 text-[clamp(36px,6vh,60px)];
+    }
+  }
+</style>
+
+<div
+  class="w-full max-w-[2000px] mx-auto md:flex md:flex-col md:landscape:min-h-screen xl:portrait:max-h-[800px]"
+>
+  <div class="flex md:flex-auto">
+    <div
+      class="flex-auto bg-[url('/img/banner-img.jpg')] bg-no-repeat bg-[65%_30px] bg-cover md:bg-[65%_top] lg:bg-right-top"
+    >
+      <div class="px-5 py-2.5 bg-white md:p-6 md:bg-transparent">
+        <img
+          class="w-[102px] md:w-[140px]"
+          src={logoALC}
+          width="140"
+          height="44"
+          alt="アルク"
+        />
+      </div>
+
+      <div class="pt-4 md:p-0">
+        <span
+          class="tagline text-base leading-[2.4em] text-white bg-[#FF914D] p-2 py-1 box-decoration-clone md:pl-6 md:text-xl md:leading-[2em] xl:text-[22px] xl:leading-[2em]"
+        >
+          日常会話で終わらない、<br class="md:hidden" /><strong
+            >生きたビジネス日本語を。</strong
+          >
+        </span>
+
+        <div class="banner-content p-5 space-y-5 md:space-y-8 md:p-8">
+          <h1
+            class="tagline-header leading-tight font-bold text-[40px] lg:text-5xl lg:leading-tight xl:text-6xl xl:leading-tight"
+          >
+            <span class="flex items-center gap-2">
+              アルク <span
+                class="text-sm bg-white border rounded-lg py-0.5 px-4"
+                >企業向け
+              </span>
+            </span>
+            <span class="block">
+              オンライン<br class="xl:hidden" />日本語スクール
+            </span>
+          </h1>
+
+          <ul class="flex gap-2 text-black pt-4 md:gap-4 md:p-0">
+            <li class="flex-1 max-w-[180px]">
+              <div
+                class="rounded-lg border text-center p-2 bg-white md:p-2 xl:p-4"
+              >
+                <h2 class="font-bold text-sm md:text-base">
+                  <span
+                    class="bg-[linear-gradient(to_top,#FF914D_0,#FF914D_8px,transparent_8px)]"
+                  >
+                    日本語教育の<br />実績
+                  </span>
+                </h2>
+                <p class="text-[10px] md:text-lg">
+                  <span class="font-bold text-[#F84949] text-lg md:text-3xl"
+                    >30</span
+                  > 年以上
+                </p>
+              </div>
+            </li>
+            <li class="flex-1 max-w-[180px]">
+              <div
+                class="rounded-lg border text-center p-2 bg-white md:p-2 xl:p-4"
+              >
+                <h2 class="font-bold text-sm md:text-base">
+                  <span
+                    class="bg-[linear-gradient(to_top,#FF914D_0,#FF914D_8px,transparent_8px)]"
+                  >
+                    日本語研修<br />受講生満足度
+                  </span>
+                </h2>
+                <p class="text-[10px] md:text-lg">
+                  <span class="font-bold text-[#F84949] text-lg md:text-3xl"
+                    >99</span
+                  > %以上
+                </p>
+              </div>
+            </li>
+            <li class="flex-1 max-w-[180px]">
+              <div
+                class="rounded-lg border text-center p-2 bg-white md:p-2 xl:p-4"
+              >
+                <h2 class="font-bold text-sm md:text-base">
+                  <span
+                    class="bg-[linear-gradient(to_top,#FF914D_0,#FF914D_8px,transparent_8px)]"
+                  >
+                    日本語研修<br />提供実績
+                  </span>
+                </h2>
+                <p class="text-[10px] md:text-lg">
+                  <span class="font-bold text-[#F84949] text-lg md:text-3xl"
+                    >270</span
+                  >
+                  社以上
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <a
+            class="js-form-trigger shadow-md shadow-black/20 font-bold bg-[#F84949] hover:bg-[#F77878] text-white text-center flex items-center justify-center h-12 w-full max-w-[400px] mx-auto lg:hidden"
+            href="#">まずはお問い合わせ（1分）</a
+          >
+
+          <ul
+            class="text-sm space-y-2 lg:space-y-1 md:text-base lg:text-sm xl:text-lg"
+          >
+            <li
+              class="flex items-baseline gap-4 before:w-2 before:h-2 before:bg-[#F84949] before:relative before:-top-0.5 before:flex-none"
+            >
+              レベル・ニーズに合わせたマンツーマン形式のレッスン
+            </li>
+            <li
+              class="flex items-baseline gap-4 before:w-2 before:h-2 before:bg-[#F84949] before:relative before:-top-0.5 before:flex-none"
+            >
+              指導経験が3年（1000時間）以上で有資格の日本人講師が指導
+            </li>
+            <li
+              class="flex items-baseline gap-4 before:w-2 before:h-2 before:bg-[#F84949] before:relative before:-top-0.5 before:flex-none"
+            >
+              日常会話からビジネス日本語（敬語・電話・マナー）まで学べる
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="contact-form"
+      class="fixed z-40 overflow-auto right-0 top-0 w-full h-full translate-x-full bg-[#F4F4F4] p-5 py-10 transition-all duration-500 ease-in-out [&.active]:translate-x-0 sm:p-8 sm:max-w-[440px] md:py-5 lg:grid lg:place-content-center lg:static lg:translate-x-0 lg:h-auto lg:py-4 xl:px-10"
+    >
+      <FormRun />
+
+      <div class="pt-8 lg:hidden">
+        <a class="js-close-form inline-flex gap-2 items-center" href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="20"
+            viewBox="0 0 10 20"
+          >
+            <path
+              id="Polygon_3"
+              data-name="Polygon 3"
+              d="M10,0,20,10H0Z"
+              transform="translate(0 20) rotate(-90)"
+              fill="#707070"></path>
+          </svg>
+          戻る
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#1237AF] text-white p-4 2xl:px-12">
+    <div
+      class="text-center space-y-2.5 lg:space-y-0 lg:text-left lg:flex lg:items-center lg:justify-center lg:gap-12"
+    >
+      <div
+        class="font-bold inline-block whitespace-nowrap text-[#093557] rounded-full bg-[#F8BE06] leading-none py-3 px-6 md:text-lg lg:text-base xl:text-[22px]"
+      >
+        トライアルレッスン<span class="font-normal">実施中!</span>
+      </div>
+
+      <br class="lg:hidden" />
+
+      <div
+        class="relative inline-block mx-auto max-w-[220px] sm:max-w-none lg:m-0"
+      >
+        <div
+          class="font-bold text-xl sm:leading-none sm:text-lg xl:text-[22px]"
+        >
+          <span class="text-lg xl:text-[22px]">質の高さを体験できる</span><br
+            class="sm:hidden"
+          /><span class="border-b-4 border-[#F8BE06] leading-tight">
+            正規レッスンと同様の<span
+              class="inline-block text-4xl sm:leading-none lg:-mt-[18px] xl:text-[44px]"
+              >50</span
+            ><span class="font-normal">分のトライアル※</span>
+          </span>
+        </div>
+        <div class="absolute right-0 top-[calc(100%+5px)] text-[8px]">
+          ※トライアルは１回のみとなります
+        </div>
+      </div>
+
+      <div
+        class="text-sm font-medium pt-4 lg:p-0 lg:text-xs xl:text-base xl:leading-snug"
+      >
+        <!-- <span class="lg:hidden">詳しくはお問い合わせください</span>
+            <span class="hidden lg:inline">
+              詳しくは上記のフォームより<br />お問い合わせください
+            </span> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const formTrigger = document.querySelector('.js-form-trigger') as HTMLElement;
+  const closeForm = document.querySelector('.js-close-form') as HTMLElement;
+  const contactForm = document.querySelector('#contact-form') as HTMLElement;
+
+  if (formTrigger) {
+    formTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      contactForm.classList.toggle('active');
+    });
+  }
+
+  if (closeForm) {
+    closeForm.addEventListener('click', (e) => {
+      e.preventDefault();
+      contactForm.classList.remove('active');
+    });
+  }
+</script>

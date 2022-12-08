@@ -1,0 +1,80 @@
+---
+import CallToAction from './CallToAction.astro';
+import logoYamaha from '/img/logo-yamaha.jpg';
+import userVoice1 from '/img/user-voice-1.jpg';
+import userVoice2 from '/img/user-voice-2.jpg';
+
+const userVoices = [
+  {
+    logo: {
+      src: `${logoYamaha}`,
+      alt: 'logo-yamaha'
+    },
+    img: {
+      src: `${userVoice1}`,
+      alt: 'ヤマハ発動機株式会社'
+    },
+    title: 'ヤマハ発動機株式会社',
+    content:
+      '<p>当社は外国籍総合職社員を積極的に採用しており、採用試験合格から入社までの間に、レベルに合わせて日本語力を向上させるコースを検討していました。 その際に、内定者は世界各地にちらばり、オンライン受講が必要であっため、「アルクオンライン日本語スクール」を採用することにしました。決め手は、講師の質の高さや レッスン時間、 価格のほか、 ビジネスに特化したコースなど幅広いコースレベルの設定です。基本的には内定者に向けて、会社負担の研修の一環として、また福利厚生の一環として導入しています。</p><p>現在、外国籍総合職社員の採用説明で、会社提供サービスとして宣伝も行っています。その結果、外国籍内定者には入社前福利厚生として喜ばれ、当社は内定時期の繋がり手段として両者ウィン・ウィンの状況が生まれ、大変満足しています。</p>'
+  },
+  {
+    logo: null,
+    img: {
+      src: `${userVoice2}`,
+      alt: '大手工作機械メーカー'
+    },
+    title: '大手工作機械メーカー',
+    content:
+      '<p>以前から、海外からの出向受入社員に対する福利厚生の一環として日本語学習費用を補助していましたが、会社（人事部）として推奨しているコースやプログラムがなく、検討を進めている中で、「アルクオンライン日本語スクール」を知りました。幅広いレベルに対応していて、かつ申込手続きがシンプルだったため採用を決めました。会社（人事部）推奨コースとして社員への案内がシンプルになったほか、申込方法が簡素化されたことで、人事部の工数が削減できたと思います。</p>'
+  }
+];
+---
+
+<section class="bg-white overflow-hidden py-10 md:py-20">
+  <div class="max-w-[1040px] mx-auto px-5">
+    <header class="mb-10 space-y-4">
+      <h2 class="font-bold text-3xl md:text-4xl">
+        <small
+          class="block font-quicksand font-medium text-[#F84949] text-[0.5em]"
+          >User's Voice</small
+        >
+        <span class="block">導入企業さまからの声</span>
+      </h2>
+    </header>
+
+    <div class="max-w-[900px] mx-auto">
+      <div class="space-y-20 md:space-y-0">
+        {
+          userVoices.map((item) => (
+            <div class="space-y-2 md:flex md:flex-row-reverse md:items-center md:space-y-0 md:gap-10 md:justify-between lg:gap-20">
+              <div class="relative w-full aspect-[3/2] md:aspect-auto md:flex-none md:w-[250px] md:h-[600px]">
+                <img
+                  class="w-full h-full object-cover md:w-auto md:max-w-none md:h-full md:absolute md:left-0 md:top-0"
+                  src={item.img.src}
+                  alt={item.img.alt}
+                />
+              </div>
+              <div class="space-y-4 md:max-w-[550px]">
+                {item.logo && (
+                  <img
+                    class="w-[180px]"
+                    src={item.logo.src}
+                    alt={item.logo.alt}
+                  />
+                )}
+                <h3 class="flex flex-wrap items-baseline gap-2 border-b-2 font-bold text-xl border-[#F84949] py-2 md:text-2xl">
+                  <span set:html={item.title} />
+                  <small class="font-normal text-sm">様</small>
+                </h3>
+                <div set:html={item.content} />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<CallToAction />

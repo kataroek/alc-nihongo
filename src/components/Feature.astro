@@ -1,0 +1,100 @@
+---
+import CallToAction from './CallToAction.astro';
+import feature1 from '/img/feature-1.jpg';
+import feature2 from '/img/feature-2.jpg';
+import feature3 from '/img/feature-3.jpg';
+import feature4 from '/img/feature-4.jpg';
+import feature5 from '/img/feature-5.jpg';
+
+const features = [
+  {
+    img: {
+      src: `${feature1}`,
+      alt: '日本語教育実績30年以上、導入企業270社以上 の高い指導実績'
+    },
+    title: `日本語教育実績30年以上、<br><span>導入企業270社以上</span> の高い指導実績`,
+    content: `<p>アルクの日本語教育の実績は30年以上。日本語学校で選ばれているテキストや日本語教師養成コース、会話力テストJSSTなど多くの質の高いサービスの開発を続けてきました。そのノウハウを生かしたアルクオンライン日本語スクールは、2015年からサービスを開始し、270社以上の企業様にご採用いただいています。</p>`
+  },
+  {
+    img: {
+      src: `${feature2}`,
+      alt: '日本語教育の豊富な経験を持つクオリティの高い講師陣'
+    },
+    title: `日本語教育の豊富な経験を持つ<br><span>クオリティの高い講師陣</span>`,
+    content: `<p>担当講師は全員、日本語教育の有資格者で指導経験が3年（1000時間）以上の日本語ネイティブ講師です。専門的知識と経験を兼ね備えた講師が、ひとりひとりの受講生に合わせたきめ細やかなレッスンと的確なフィードバックを行い、効果的に日本語力を伸ばしていきます。</p>`
+  },
+  {
+    img: {
+      src: `${feature3}`,
+      alt: '日本語レベルに合わせて受講できる充実の11コース'
+    },
+    title: '日本語レベルに合わせて受講できる<br><span>充実の11コース</span>',
+    subTitle: `他社社員とのレッスンや厳選された講師の指導で、受講生の自己研鑽を後押し。`,
+    content: `<p>アルクオンライン日本語スクールのコースは入門から上級まで充実の11コース。ひらがなが読めない初学者でも、テキストには英語解説とローマ字がついているので、安心して受講できます。また、中級者、上級者はビジネス場面（敬語・電話・ビジネスマナーなど）の日本語を学ぶことができ、すぐにオフィスで使える内容が満載です。</p>`
+  },
+  {
+    img: {
+      src: `${feature4}`,
+      alt: '受講生満足度 99％以上！アウトプット重視で会話力が伸びる！'
+    },
+    title: `受講生満足度 99％以上！<br><span>アウトプット重視</span> で会話力が伸びる！`,
+    content: `<p>アルクオンライン日本語スクールの受講生満足度は99％以上！オリジナルテキストを使用したマンツーマンの50分レッスンはアウトプット重視で、しっかりと会話力を高めます。受講生はもちろん、企業のご担当者様からも「会話力が伸びた」「積極的に話すようになった」とご好評いただいています。</p>`
+  },
+  {
+    img: {
+      src: `${feature5}`,
+      alt: '幅広いレッスン時間と充実したサポート体制！'
+    },
+    title: `幅広いレッスン時間と<br><span>充実したサポート体制！</span>`,
+    content: `<p>365日、日本時間の朝6時から夜11時スタートのレッスンが選べるので、業務時間内外、どちらでもご利用いただけます。受講生自身が予約、キャンセルを行えるため、企業のご担当者様が日程調整を行う手間が省け、効率的に研修を実施できます。<br>また、ご担当者様は管理者画面で受講生一人一人の受講状況や講師からのフィードバックが確認でき、受講を促すリマインドメールを送ることも可能です。</p>`
+  }
+];
+---
+
+<section
+  class="bg-white overflow-hidden relative py-10 after:bg-[#F4F4F4] after:absolute after:right-0 after:bottom-0 after:h-[calc(100%-260px)] after:w-2/3 md:py-20"
+>
+  <div class="max-w-[1040px] mx-auto px-5 relative z-10">
+    <header class="mb-10 space-y-4">
+      <h2 class="font-bold text-3xl md:text-4xl">
+        <small
+          class="block font-quicksand font-medium text-[#F84949] text-[0.5em]"
+          >Feature</small
+        >
+        <span class="block"
+          >アルクオンライン日本語スクール<span class="font-medium">の</span
+          ><span class="text-[#F84949] inline-block">特長</span>
+        </span>
+      </h2>
+      <p>
+        受講生にも企業のご担当者様にも、嬉しいメリットがたくさん。<br
+        />アルクが選ばれ続けるのには理由があります。
+      </p>
+    </header>
+
+    <div class="max-w-[900px] mx-auto">
+      <div class="pt-20 grid gap-10 [counter-reset:feature]">
+        {
+          features.map((item) => (
+            <div class="space-y-10 relative md:space-y-0 md:flex md:gap-16 md:even:flex-row-reverse">
+              <div class="md:flex-none md:w-[420px]">
+                <img src={item.img.src} alt={item.img.alt} />
+              </div>
+              <div class="relative py-6 [counter-increment:feature] after:font-quicksand after:content-[counter(feature,decimal-leading-zero)] after:font-medium after:text-[#FF914D]/20 after:leading-none after:absolute after:-left-10 after:-top-10 after:text-[140px] ">
+                <div class="space-y-2 relative z-10">
+                  <h3
+                    class="font-bold text-lg [&>span]:inline-block [&>span]:px-2 [&>span]:py-0.5 [&>span]:bg-[#F84949] [&>span]:text-white md:text-xl"
+                    set:html={item.title}
+                  />
+                  <div set:html={item.content} />
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<CallToAction />

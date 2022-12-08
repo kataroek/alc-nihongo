@@ -1,0 +1,87 @@
+---
+import TopBanner from '../components/TopBanner.astro';
+import Feature from '../components/Feature.astro';
+import UserVoice from '../components/UserVoice.astro';
+import Price from '../components/Price.astro';
+import Contact from '../components/Contact.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+import favicon from '/favicon.png';
+import ogp from '/ogp.png';
+---
+
+<html lang="ja" class="scroll-smooth scroll-p-20">
+  <head>
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-K3GBG4K');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="utf-8" />
+    <link href={favicon} rel="icon" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>
+      アルク
+      オンライン日本語スクール企業向けオンライン日本語スクール【英語研修のアルク】
+    </title>
+
+    <meta
+      name="description"
+      content="アルクの企業向けオンライン日本語スクールでは、レベル・ニーズに合わせたマンツーマン形式のレッスンにて指導経験が3年（1000時間）以上で有資格の日本人講師のレッスンにて、日常会話からビジネス日本語（敬語・電話・マナー）まで学べます。"
+    />
+
+    <meta
+      property="og:title"
+      content="アルク オンライン日本語スクール企業向けオンライン日本語スクール【英語研修のアルク】"
+    />
+    <meta
+      property="og:description"
+      content="アルクの企業向けオンライン日本語スクールでは、レベル・ニーズに合わせたマンツーマン形式のレッスンにて指導経験が3年（1000時間）以上で有資格の日本人講師のレッスンにて、日常会話からビジネス日本語（敬語・電話・マナー）まで学べます。"
+    />
+    <meta property="og:image" content={ogp} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Quicksand:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script is:inline src="https://sdk.form.run/js/v2/formrun.js"></script>
+  </head>
+
+  <body class="font-noto bg-slate-800 antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-K3GBG4K"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <main class="site-content">
+      <TopBanner />
+      <Feature />
+      <UserVoice />
+      <Price />
+      <Contact />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

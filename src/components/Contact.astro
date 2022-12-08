@@ -1,0 +1,45 @@
+---
+import CallToAction from './CallToAction.astro';
+import FormRun from './FormRun.astro';
+import contactImg from '/img/contact-img.jpg';
+---
+
+<section id="target-contact-form" class="bg-white py-10 md:py-0">
+  <div class="max-w-[1040px] mx-auto px-5 relative z-10">
+    <div
+      class="md:flex md:flex-row-reverse md:gap-10 md:justify-between lg:gap-20"
+    >
+      <div
+        class="-mt-10 -mx-5 py-10 px-5 bg-[#F4F4F4] md:m-0 md:px-5 md:w-1/2 md:max-w-[420px] md:flex-none md:grid md:place-content-center"
+      >
+        <FormRun />
+      </div>
+
+      <div class="space-y-4 py-4">
+        <h2 class="font-bold text-xl md:text-[22px]">
+          <small class="block text-sm md:text-base"
+            >「アルクオンライン日本語スクール」のサービス内容について</small
+          >
+          詳しく説明した資料を<span class="text-[#F84949]">無料</span
+          >でお配りしています
+        </h2>
+        <img
+          src={contactImg}
+          alt="詳しく説明した資料を無料でお配りしています"
+        />
+        <h3 class="font-medium">こんな方におすすめです</h3>
+        <ul
+          class="space-y-2 [&>li]:flex [&>li]:items-center [&>li]:gap-2 [&>li]:before:w-2 [&>li]:before:h-2 [&>li]:before:bg-[#F84949] [&>li]:before:block"
+        >
+          <li>社員の日本語教育をどのような形態で行えば良いか悩んでいる</li>
+          <li>外国人社員の日本語会話力を底上げしたい</li>
+          <li>
+            外国人の内定者に対して、入社前までにある程度の日本語を話せるようになってほしい
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<CallToAction />
